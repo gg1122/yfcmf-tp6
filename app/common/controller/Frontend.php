@@ -120,7 +120,7 @@ class Frontend extends BaseController
             'controllername' => $controllername,
             'actionname'     => $actionname,
             'jsname'         => 'frontend/'.str_replace('.', '/', $controllername),
-            'moduleurl'      => rtrim(url("/{$modulename}", [], false), '/'),
+            'moduleurl'      => rtrim(request()->root(), '/'),
             'language'       => $lang,
         ];
 
